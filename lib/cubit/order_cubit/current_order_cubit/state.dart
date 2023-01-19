@@ -1,0 +1,3 @@
+abstract class CurrentOrderDetailsState{}
+class InitialCurrentOrderDetailsState extends CurrentOrderDetailsState{}
+class ChangeCurrentOrderDetailsState extends CurrentOrderDetailsState{}

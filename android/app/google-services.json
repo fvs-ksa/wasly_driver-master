@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "32336204720",
+    "project_id": "driver-wasely",
+    "storage_bucket": "driver-wasely.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32336204720:android:39299af1ae9dc9f9f4fc75",
+        "android_client_info": {
+          "package_name": "com.wasly_driver.fvs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32336204720-fg0v88ivg8r5ttgcir7vpuuk3l5kculp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwHqiCXWqgZlmQPovdX0ZzgRr1E4Mn38k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32336204720-fg0v88ivg8r5ttgcir7vpuuk3l5kculp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

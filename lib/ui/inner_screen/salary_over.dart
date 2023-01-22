@@ -13,6 +13,7 @@ TextEditingController priceController=TextEditingController();
 final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
+    Size size=MediaQuery.of(context).size;
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
@@ -29,7 +30,7 @@ final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
                     alignment: AlignmentDirectional.topStart,
                     child: Text('تفاصيل الطلب',style: TextStyle(color: Palette.mainColor,fontSize: 16.sp),)),
                 Container(
-                  height: 13.h,
+                  height: 15.h,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20.sp),
                       border: Border.all(color: Palette.mainColor)),
@@ -53,15 +54,15 @@ final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
                         indent: 2.h,
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(vertical: 3.0.h),
+                        padding: EdgeInsets.symmetric(vertical: 2.0.h),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           // mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text('جبلي : دواء من صيديله النهدي',
-                                style: TextStyle(fontSize: 17.sp),
+                                style: TextStyle(fontSize:size.height>1000?12.sp: 15.sp),
                                 textAlign: TextAlign.start),
-                            Text('طريقه الدفع : كاش',textAlign: TextAlign.start,)
+                            Text('طريقه الدفع : كاش',textAlign: TextAlign.start,style: TextStyle(fontSize:size.height>1000?11.sp: 12.sp),)
                           ],
                         ),
                       ),

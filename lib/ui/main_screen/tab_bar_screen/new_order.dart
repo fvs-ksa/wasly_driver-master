@@ -17,7 +17,7 @@ class NewOrderScreen extends StatelessWidget {
           GestureDetector(
             onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SalaryOverScreen()));},
             child: Container(
-              height: 13.h,
+              height: 15.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20.sp),
                 border: Border.all(color: Palette.mainColor)
@@ -25,7 +25,7 @@ class NewOrderScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Padding(
-                    padding:  EdgeInsets.symmetric(horizontal: 3.0.w),
+                    padding:  EdgeInsets.symmetric(horizontal: 2.0.w),
                     child: Container(
                      // padding: EdgeInsets.symmetric(horizontal: 3.w),
                       height: 13.h,
@@ -37,12 +37,12 @@ class NewOrderScreen extends StatelessWidget {
                   ),
                   VerticalDivider(width: 2.w,thickness: 0.4.w,endIndent: 2.h,indent: 2.h,),
                   Padding(
-                    padding:  EdgeInsets.symmetric(vertical: 3.0.h),
+                    padding:  EdgeInsets.symmetric(vertical: 1.0.h),
                     child: Column(
                      // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('طلب جديد',style: TextStyle(fontSize: 17.sp),textAlign: TextAlign.start),
-                        Text('عليك تقديم عرض سعر',style: TextStyle(fontSize: 14.sp),)
+                        Text('طلب جديد',style: TextStyle(fontSize: 15.sp),textAlign: TextAlign.start),
+                        Text('عليك تقديم عرض سعر',style: TextStyle(fontSize: 13.sp),)
                       ],
                     ),
                   )
@@ -54,7 +54,7 @@ class NewOrderScreen extends StatelessWidget {
           GestureDetector(
             onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=>OrderDetailsAndAcceptOrRefuse()));},
             child: Container(
-              height: 13.h,
+              height: 15.h,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.sp),
                   border: Border.all(color: Palette.mainColor)
@@ -74,12 +74,12 @@ class NewOrderScreen extends StatelessWidget {
                   ),
                   VerticalDivider(width: 2.w,thickness: 0.4.w,endIndent: 2.h,indent: 2.h,),
                   Padding(
-                    padding:  EdgeInsets.symmetric(vertical: 3.0.h),
+                    padding:  EdgeInsets.symmetric(vertical: 1.0.h),
                     child: Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('طلب جديد',style: TextStyle(fontSize: 17.sp),textAlign: TextAlign.start),
-                        Text('مطعم هيرفي',style: TextStyle(fontSize: 14.sp),)
+                        Text('طلب جديد',style: TextStyle(fontSize: 15.sp),textAlign: TextAlign.start),
+                        Text('مطعم هيرفي',style: TextStyle(fontSize: 13.sp),)
                       ],
                     ),
                   )

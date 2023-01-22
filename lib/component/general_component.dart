@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:sizer/sizer.dart';
 
+import '../navigation_Services.dart';
+
 void showToast({required String text,required ToastState state})=>Fluttertoast.showToast(
     msg: text,
     toastLength: Toast.LENGTH_SHORT,
@@ -24,6 +26,18 @@ Color chooseColor(ToastState state){
     break;
   }
   return color;
+
+}
+navigateForward(Widget page, {arguments}) {
+  NavigationService.navigate().navigateToScreen(page, arguments: arguments);
+
+}
+navigateForwardReplace(Widget page, {arguments}) {
+  NavigationService.navigate().replaceScreen(page, arguments: arguments);
+
+}
+navigateForwardPop(Widget page, {arguments}) {
+  NavigationService.navigate().goBack(page);
 
 }
 navigateTo({required BuildContext context, required Widget child}) {

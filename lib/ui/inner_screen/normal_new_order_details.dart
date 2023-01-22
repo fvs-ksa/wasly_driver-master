@@ -15,6 +15,7 @@ class OrderDetailsAndAcceptOrRefuse extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size=MediaQuery.of(context).size;
     var cubit=MainOrderCubit.get(context);
     return BlocConsumer<MainOrderCubit,MainOrderState>(
       listener: (context,state){},
@@ -33,7 +34,7 @@ class OrderDetailsAndAcceptOrRefuse extends StatelessWidget {
                       alignment: AlignmentDirectional.topStart,
                       child: Text('تفاصيل الطلب',style: TextStyle(color: Palette.mainColor,fontSize: 16.sp),)),
                   Container(
-                    height: 30.h,
+                    height:size.height>1000?45.h: 38.8.h,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20.sp),
                         border: Border.all(color: Palette.mainColor)),
@@ -83,11 +84,13 @@ class OrderDetailsAndAcceptOrRefuse extends StatelessWidget {
                              children: [
                                IconButton(onPressed: ()async{
                                  await launchUrlString('tel:${0506632217}');
-                               }, icon: Icon(Icons.call,color: Colors.blueAccent,)),
-                               IconButton(onPressed: (){MainOrderCubit.openMap(21.5529449, 39.1843989);}, icon: Icon(Icons.location_on,color: Palette.mainColor,)),
+                               }, icon: Icon(Icons.call,color: Colors.blueAccent,size: size.height>1000?13.sp:10.sp)),
+                               SizedBox(height: 2.h,),
+                               IconButton(onPressed: (){MainOrderCubit.openMap(21.5529449, 39.1843989);}, icon: Icon(Icons.location_on,color: Palette.mainColor,size: size.height>1000?13.sp:10.sp)),
+                            SizedBox(height: 2.h,),
                              cubit.isAccept?  IconButton(onPressed: (){
                                navigateTo(context: context, child: ChatScreen());
-                             }, icon: Icon(Icons.chat,color: Colors.green,)):SizedBox()
+                             }, icon: Icon(Icons.chat,color: Colors.green,size: size.height>1000?13.sp:10.sp)):SizedBox()
                              ],
                            ),
                          )

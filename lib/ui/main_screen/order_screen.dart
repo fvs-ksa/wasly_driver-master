@@ -44,7 +44,7 @@ class _OrderScreenState extends State<OrderScreen>
             elevation: 0,
             bottom: PreferredSize(
               preferredSize:
-                  Size.fromHeight(MediaQuery.of(context).size.height * .03),
+                  Size.fromHeight(MediaQuery.of(context).size.height * 0.03),
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 4.w),
                 child: Card(
@@ -54,6 +54,7 @@ class _OrderScreenState extends State<OrderScreen>
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Container(
+                  //  height: 15.h,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
@@ -64,7 +65,7 @@ class _OrderScreenState extends State<OrderScreen>
                       controller: controller,
                       labelPadding: const EdgeInsets.all(8),
                       labelColor: redColor,
-                      indicatorWeight: 0.1,
+                      indicatorWeight: 0.8,
                       unselectedLabelColor: Colors.black,
                       isScrollable: true,
                       onTap: (int i) {},

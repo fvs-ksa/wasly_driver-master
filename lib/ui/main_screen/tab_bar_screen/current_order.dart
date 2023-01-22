@@ -11,6 +11,7 @@ class CurrentOrderScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size=MediaQuery.of(context).size;
    return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
@@ -38,12 +39,12 @@ class CurrentOrderScreen extends StatelessWidget {
                   ),
                   VerticalDivider(width: 2.w,thickness: 0.4.w,endIndent: 2.h,indent: 2.h,),
                   Padding(
-                    padding:  EdgeInsets.symmetric(vertical: 3.0.h),
+                    padding:  EdgeInsets.symmetric(vertical: .2.h),
                     child: Column(
                       // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('طلب حالي',style: TextStyle(fontSize: 17.sp),textAlign: TextAlign.start),
-                        Text('مطعم كنتاكي',style: TextStyle(fontSize: 14.sp),)
+                        Text('طلب حالي',style: TextStyle(fontSize:size.height>1000?14.sp: 17.sp),textAlign: TextAlign.start),
+                        Text('مطعم كنتاكي',style: TextStyle(fontSize:size.height>1000?12.sp: 14.sp),)
                       ],
                     ),
                   )

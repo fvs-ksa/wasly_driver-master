@@ -62,16 +62,21 @@ Widget mainButton({
       decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(15)),
-      child: Center(child: Text(
-        text,
-        // cubit.isRegister
-        //     ? 'انشاء حساب'
-        //     : 'ارسال كود تحقق',
-        style: TextStyle(
-            color: Colors.white,
-            fontWeight: fontWeight,
-            fontSize: 18.sp),
-      ),),
+      child: Align(
+        alignment: Alignment.center,
+        child: Text(
+          text,
+          textAlign: TextAlign.center,
+          // cubit.isRegister
+          //     ? 'انشاء حساب'
+          //     : 'ارسال كود تحقق',
+          style: TextStyle(
+
+              color: Colors.white,
+              fontWeight: fontWeight,
+              fontSize: 18.sp),
+        ),
+      ),
     ),
   );
 

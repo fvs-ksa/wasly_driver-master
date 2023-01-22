@@ -56,14 +56,14 @@ class CurrentOrderDetails extends StatelessWidget {
                         ),
                         SizedBox(height: 2.h,),
                         Container(
-                          height: 30.h,
+                          height: size.height>1000?48.h: 38.8.h,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20.sp),
                               border: Border.all(color: redColor)),
                           child: Row(
                             children: [
                               Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 3.0.w),
+                                padding: EdgeInsets.symmetric(horizontal: 1.0.w),
                                 child: Container(
                                   // padding: EdgeInsets.symmetric(horizontal: 3.w),
                                   height: 13.h,

@@ -20,68 +20,71 @@ class LoginScreen extends StatelessWidget {
     return BlocConsumer<AuthCubit, AuthState>(
       listener: (context, state) {},
       builder: (context, state) {
-        return Directionality(
-          textDirection: TextDirection.rtl,
-          child: Scaffold(
-            body: Form(
-              key: _formKey,
-              child: SingleChildScrollView(
-                child: Column(
-                  // mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'assets/logo_wassly_ar.png',
-                    ),
-                    textFormField(
-                      controller: userNameController,
-                      fct: (value) {
-                        if (value.isEmpty) {
-                          return 'من فضلك قم بادخال الاسم';
-                        }
-                      },
-                      label: 'اسم المستخدم',
-                      prefix: Icons.person,
-                      //  secure: authCubit.isVisible,
-                      // suffix:authCubit.isVisible?Icons.visibility:Icons.visibility_off ,
-                      // suffixTap: (){authCubit.changeVisibility();}
-                    ),
-                    SizedBox(
-                      height: 2.h,
-                    ),
-                    textFormField(
-                        controller: passwordController,
+        return GestureDetector(
+          onTap: (){FocusManager.instance.primaryFocus?.unfocus();},
+          child: Directionality(
+            textDirection: TextDirection.rtl,
+            child: Scaffold(
+              body: Form(
+                key: _formKey,
+                child: SingleChildScrollView(
+                  child: Column(
+                    // mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/logo_wassly_ar.png',
+                      ),
+                      textFormField(
+                        controller: userNameController,
                         fct: (value) {
                           if (value.isEmpty) {
-                            return 'من فضلك قم بادخال الرقم السري';
+                            return 'من فضلك قم بادخال الاسم';
                           }
                         },
-                        label: 'الرقم السري',
-                        prefix: Icons.lock,
-                        secure: authCubit.isVisible,
-                        suffix: authCubit.isVisible
-                            ? Icons.visibility_off
-                            : Icons.visibility,
-                        suffixTap: () {
-                          authCubit.changeVisibility();
-                        }),
-                    SizedBox(
-                      height: 2.h,
-                    ),
-                    mainButton(
-                      width: 40.w,
-                      text: 'تسجيل الدخول',
-                      fct: () {
-                        if (_formKey.currentState!.validate()) {
-                          if (kDebugMode) {
-                            print('object');
+                        label: 'اسم المستخدم',
+                        prefix: Icons.person,
+                        //  secure: authCubit.isVisible,
+                        // suffix:authCubit.isVisible?Icons.visibility:Icons.visibility_off ,
+                        // suffixTap: (){authCubit.changeVisibility();}
+                      ),
+                      SizedBox(
+                        height: 2.h,
+                      ),
+                      textFormField(
+                          controller: passwordController,
+                          fct: (value) {
+                            if (value.isEmpty) {
+                              return 'من فضلك قم بادخال الرقم السري';
+                            }
+                          },
+                          label: 'الرقم السري',
+                          prefix: Icons.lock,
+                          secure: authCubit.isVisible,
+                          suffix: authCubit.isVisible
+                              ? Icons.visibility_off
+                              : Icons.visibility,
+                          suffixTap: () {
+                            authCubit.changeVisibility();
+                          }),
+                      SizedBox(
+                        height: 2.h,
+                      ),
+                      mainButton(
+                        width: 40.w,
+                        text: 'تسجيل الدخول',
+                        fct: () {
+                          if (_formKey.currentState!.validate()) {
+                            if (kDebugMode) {
+                              print('object');
+                            }
+                            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> const TabsScreen()));
                           }
-                          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> const TabsScreen()));
-                        }
-                      },
-                      color: redColor,
-                      context: context,
-                    )
-                  ],
+                        },
+                        color: redColor,
+                        context: context,
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

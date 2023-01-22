@@ -51,6 +51,7 @@ class ChatScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size=MediaQuery.of(context).size;
     var chatCubit = ChatCubit.get(context);
     return BlocConsumer<ChatCubit, ChatState>(
       listener: (context, state) {},
@@ -86,7 +87,7 @@ class ChatScreen extends StatelessWidget {
                       ),
                       Text(
                         'احمد علي',
-                        style: TextStyle(fontSize: 15.sp, color: Colors.white),
+                        style: TextStyle(fontSize:size.height>1000?8.sp: 15.sp, color: Colors.white),
                       ),
                     ],
                   ),
@@ -97,7 +98,7 @@ class ChatScreen extends StatelessWidget {
                       icon: FaIcon(
                         FontAwesomeIcons.phone,
                         color: Colors.white,
-                        size: 15.sp,
+                        size:size.height>1000?8.sp: 15.sp,
                       ))
                 ],
               ),

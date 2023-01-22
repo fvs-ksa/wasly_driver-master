@@ -22,7 +22,7 @@ class ProfileScreen extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  height: 13.h,
+                  height: 15.h,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.sp),
@@ -56,14 +56,14 @@ class ProfileScreen extends StatelessWidget {
                               ],
                             ),
                             SizedBox(
-                              width: 24.w,
+                              width:MediaQuery.of(context).size.width*.22,
                             ),
                             Padding(
                               padding: EdgeInsets.only(top: 4.h),
                               child: Container(
                                 // padding: EdgeInsets.only(top: 4.h),
                                 height: 7.h,
-                                width: 28.w,
+                                width: 30.w,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15.sp),
                                     color: Colors.amber),
@@ -71,7 +71,7 @@ class ProfileScreen extends StatelessWidget {
                                     alignment: Alignment.center,
                                     child: AutoSizeText(
                                       'اجمالي عدد الطلبات\n 16',
-                                      style: TextStyle(fontSize: 14.sp),
+                                      style: TextStyle(fontSize: 12.sp),
                                       textAlign: TextAlign.center,
                                     )),
                               ),

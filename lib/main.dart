@@ -20,6 +20,7 @@ import 'package:wasly_driver/utiles/shared_pref.dart';
 import 'constant/const_color.dart';
 import 'cubit/order_cubit/current_order_cubit/cubit.dart';
 import 'fcm/fcm.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -60,8 +61,12 @@ class MyApp extends StatelessWidget {
     child: Sizer(
         builder: (context,orientation,deviceType) {
           return OverlaySupport.global(
-
             child: MaterialApp(
+              localizationsDelegates: const [
+                        GlobalMaterialLocalizations.delegate,
+                        GlobalCupertinoLocalizations.delegate,
+                        GlobalWidgetsLocalizations.delegate,
+                      ],
               useInheritedMediaQuery: true,
               locale: DevicePreview.locale(context),
               builder: DevicePreview.appBuilder,
